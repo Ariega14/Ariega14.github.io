@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Profile</title>
+    <script src="https://kit.fontawesome.com/90a27e8bec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="navigator">
+        <img src="img.jpg" id="image">
+
+        <button id="buttons" onclick="navigate('aboutme')">About Me</button><br>
+        <button id="buttons" onclick="navigate('education')">Education</button><br>
+        <button id="buttons" onclick="navigate('projects')">Projects</button><br>
+        <button id="buttons" onclick="navigate('contactme')">Contact Me</button>
+    </div>
+
+    <div id="aboutme" class="tabs">
+        <h1>About Me</h1>
+        <br>
+        <h3>
+            Reginald A. Ariega
+            <br>
+            21 Years Old
+            <br>
+            09236565169
+            <br>
+            ariegareginald@gmail.com
+        </h3>
+        <h3>Hobbies</h3>
+        <ul>
+            <li>
+                Watch Movies and TV Series
+            </li>
+            <br>
+            <li>
+                Play Computer/Mobile Games
+            </li>
+            <br>
+            <li>
+                Study and gain knowledge to the latest technologies
+            </li>
+        </ul>
+        <h3>Certificates: </h3>
+        <ul>
+            <li><b>Java Programming</b> from <b>TESDA</b></li>
+            <li><b>AWS Cloud Practitioner Essentials</b> from <b>AWS TRAINING</b></li>
+            <li><b>Official ISC2 CC Online Self-paced Training</b> from <b>ISC2</b></li>
+        </ul>
+        <h3>Programming Languages Encountered: </h3>
+        <table>
+            <theader>
+                <th><i class="fa-brands fa-python"></i><br><h3>Python</h3></th>
+                <th><i class="fa-brands fa-html5"></i><br><h3>HTML</h3></th>
+                <th><i class="fa-brands fa-css3-alt"></i><br><h3>CSS</h3></th>
+                <th><i class="fa-solid fa-code"></i><br><h3>C++</h3></th>
+            </theader>
+        </table>
+    </div>
+    
+    <div id="education" class="tabs">
+        <h1>Education</h1>
+
+        <h2>Junior High School</h2>
+        <h3>San Roque National High School</h3>
+        <ul>
+            <li>Member of Supreme Student Government Organization</li>
+        </ul>
+        <br>
+        <h2>Senior High School</h2>
+        <h3>University of the East Caloocan</h3>
+        <ul>
+            <li>Member of Computer Club</li>
+        </ul>
+        <br>
+        <h2>Tertiary</h2>
+        <h3>Pamantasan ng Lungsod ng Maynila</h3>
+        <ul>
+            <li>Consistent Dean's Lister</li>
+        </ul>
+    </div>
+    
+    <div id="projects" class="tabs">
+        <h1>Projects</h1>
+
+        <h2>Brgy. Pri-Mation</h2>
+        <ul>
+            <li>Hardware and Software device designed to deliver needed barangay documents without the presence of Barangay Officials lessening the workload.</li>
+        </ul>
+        <h3>Tools Used:</h3>
+            <table>
+                <theader>
+                    <th><i class="fa-brands fa-java"></i><br><h3>Java</h3></th>
+                    <th><i class="fa-brands fa-html5"></i><br><h3>HTML</h3></th>
+                    <th><i class="fa-brands fa-css3-alt"></i><br><h3>CSS</h3></th>
+                    <th><i class="fa-solid fa-code"></i><br><h3>C++</h3></th>
+                </theader>
+            </table>
+        <h2>IPPolice</h2>
+        <ul>
+            <li>
+                AI Powered device programmed to identify illegally parked vehicles in a street with the use of Computer Vision and Advance algorithm to determine whether a vehicle is illegally parked.
+            </li>
+        </ul>
+
+        <h3>Tools Used:</h3>
+            <table>
+                <theader>
+                    <th><i class="fa-brands fa-python"></i><br><h3>Python</h3></th>
+                    <th><i class="fa-brands fa-html5"></i><br><h3>HTML</h3></th>
+                    <th><i class="fa-brands fa-css3-alt"></i><br><h3>CSS</h3></th>
+                    <th><i class="fa-solid fa-code"></i><br><h3>C++</h3></th>
+                </theader>
+            </table>
+    </div>
+
+    <div id="contactme" class="tabs">
+        <h1>Contact Me Through These Links!</h1>
+        <br>
+        <a href="https://www.facebook.com/gosuxkuku" target="_blank">
+            <table>
+                <theader>
+                    <th id="links"><i class="fa-brands fa-facebook"></i> </th>
+                    <th id="links1"><br><h3>Reginald Ariega</h3></th>
+                </theader>
+            </table>
+
+        </a>
+        <br>
+        <a href="https://www.instagram.com/regispogi/" target="_blank">
+        <table>
+            <theader>
+                <th id="links"><i class="fa-brands fa-instagram"></i> </th>
+                <th id="links1"><br><h3>@regispogi</h3></th>
+            </theader>
+        </table>
+        </a>
+        <br>
+        <table>
+            <theader>
+                <th id="links"><i class="fa-regular fa-envelope"></i> </th>
+                <th id="links1"><br><h3>ariegareginald@gmail.com</h3></th>
+            </theader>
+        </table>
+        <br>
+        <table>
+            <theader>
+                <th id="links"><i class="fa fa-solid fa-phone"></i> </th>
+                <th id="links1"><br><h3>09236565169</h3></th>
+            </theader>
+        </table>
+    </div>
+
+    <script>
+
+        function navigate(tabId){
+            const tabs = document.querySelectorAll('.tabs');
+            tabs.forEach(tab => tab.classList.remove('show'));
+
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('show');
+            }
+            document.querySelectorAll('tabs')
+        }
+    </script>
+</body>
+</html>
